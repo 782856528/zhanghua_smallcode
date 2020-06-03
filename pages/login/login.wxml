@@ -1,0 +1,14 @@
+<!--登录-->
+<view class="containers">
+    <view class="imgbox">
+        <image src="../../static/images/dianboss.png"></image>
+    </view>
+    <view class="content">
+          <input class="input" value="{{name}}" type="text"  data-name="name" bindinput="setInputVal" placeholder="请输入账号"/>
+          <input class="input" password value="{{password}}" type="text"  data-name="password" bindinput="setInputVal" placeholder="请输入密码"/>
+          <text>注册</text>
+    </view>
+    <view class="btn_box">
+     <van-button type="primary" round class="btn" bindtap="login">登录</van-button>
+    </view>
+</view>
