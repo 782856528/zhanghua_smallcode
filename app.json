@@ -1,7 +1,10 @@
 {
   "pages":[
-    "pages/login/login",
     "pages/index/index",
+    "pages/mine/mine",
+    "pages/order/order",
+    "pages/login/login",
+    "pages/register/register",
     "pages/logs/logs"
   ],
   "window":{
@@ -10,8 +13,37 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
   },
+  "tabBar": {
+    "color": "#8a8a8a",  
+    "selectedColor": "#2E87E4", 
+    "backgroundColor": "#ddd", 
+    "borderStyle": "black", 
+    "position": "bottom", 
+    "list": [
+      {
+        "selectedIconPath": "./static/images/homesty.png",  
+        "iconPath": "./static/images/home.png", 
+        "pagePath": "pages/index/index", 
+        "text": "首页"  
+      },
+      {
+        "selectedIconPath": "./static/images/ordersty.png",  
+        "iconPath": "./static/images/order.png", 
+        "pagePath": "pages/order/order", 
+        "text": "订单"  
+      },
+      {
+        "selectedIconPath": "./static/images/minesty.png",  
+        "iconPath": "./static/images/mine.png", 
+        "pagePath": "pages/mine/mine", 
+        "text": "我的"  
+      }
+
+    ]
+  },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
+  
   "usingComponents": {
     "van-button": "/miniprogram_npm/vant-weapp/button/index"
   }

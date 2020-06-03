@@ -1,7 +1,7 @@
 /**
  * GET请求封装
  */
-let publicurl="http://192.168.0.232:3000"
+let publicurl="http://127.0.0.1:3000"
 function get(url, data = {}) {
   return request(url, data, 'GET')
 }

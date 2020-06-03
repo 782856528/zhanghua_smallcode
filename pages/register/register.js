@@ -1,11 +1,15 @@
-// pages/mine/mine.js
+// pages/login/login.js
+const app = getApp()
+var http = require("../../utils/request.js")
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    name:"",
+    password:""
   },
 
   /**
@@ -21,7 +25,18 @@ Page({
   onReady: function () {
 
   },
-
+  register(){
+    http.post("/users/register",{name:this.data.name,password:parseInt(this.data.password)}).then(res=>{
+     wx.navigateBack({
+       complete: (res) => {
+        delta:1
+       },
+     })
+    })
+  },
+  setInputVal(e) {
+    app.pulicSetData(e, this)
+  },
   /**
    * 生命周期函数--监听页面显示
    */
