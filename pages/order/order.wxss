@@ -1,1 +1,59 @@
 /* pages/order/order.wxss */
+page{
+  height: 100% !important;
+  background: #e6e6e6;
+}
+.contain{
+  overflow: hidden;
+  margin:  30rpx auto 0; 
+
+}
+.content_box{
+  width: 90%;
+  margin: 0 auto;
+  padding: 20rpx;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+}
+.content_box>view{
+  margin-bottom: 20rpx;
+}
+.content_box>view>view:first-child{
+  font-size: 24rpx;
+  color: #2E87E4;
+
+  line-height: 30rpx;
+}
+.delete image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.content_box .goods{
+  display: flex;
+  align-items: center;
+  font-size:30rpx;
+}
+.delete{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.goods image{
+  width: 150rpx;
+  height: 150rpx;
+  margin-right: 30rpx;
+}
+.goods>view{
+  display: flex;
+  height: 150rpx;
+  width: 100rpx;
+  align-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.goods>view view:last-child{
+  color: red;
+}

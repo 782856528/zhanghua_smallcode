@@ -28,6 +28,9 @@ Page({
   login(){
     http.post("/users/login",{name:this.data.name,password:parseInt(this.data.password)}).then(res=>{
      wx.setStorageSync('token', res.data.token)
+     wx.switchTab({
+       url: '../index/index',
+     })
     })
   },
   setInputVal(e) {

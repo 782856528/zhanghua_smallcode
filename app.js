@@ -5,7 +5,11 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
+    if(wx.getStorageSync('token')){
+      wx.switchTab({
+        url: '/pages/index/index',
+      })
+    }
     // 登录
     wx.login({
       success: res => {

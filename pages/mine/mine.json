@@ -1,4 +1,6 @@
 {
-  "navigationBarTitleText": "个人中心",
-  "usingComponents": {}
+  "navigationBarTitleText": "产品套餐",
+  "usingComponents": {
+    "van-dialog": "../../miniprogram_npm/vant-weapp/dialog/index"
+  }
 }

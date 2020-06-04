@@ -18,6 +18,7 @@ function post(url, data = {}) {
  */
 function request(url, data = {}, method = "") {
   var contentType = 'application/json'
+  console.log( wx.getStorageSync('token'))
   return new Promise(function(resolve, reject) {
     wx.request({
       url: publicurl+url,
@@ -25,7 +26,7 @@ function request(url, data = {}, method = "") {
       method: method,
       header: {
         'Content-Type': contentType,
-        'Authorization': 'Bearer ' + wx.getStorageInfoSync('token')
+        'Authorization': 'Bearer ' + wx.getStorageSync('token')
       },
       success: function(res) {
         if (res.data.isSuccess == true) {

@@ -1,9 +1,10 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/mine/mine",
-    "pages/order/order",
     "pages/login/login",
+    "pages/order/order",
+    "pages/mine/mine",
+    "pages/address/address",
+    "pages/index/index",
     "pages/register/register",
     "pages/logs/logs"
   ],
@@ -27,18 +28,24 @@
         "text": "首页"  
       },
       {
+        "selectedIconPath": "./static/images/combosty.png",  
+        "iconPath": "./static/images/combo.png", 
+        "pagePath": "pages/mine/mine", 
+        "text": "套餐"  
+      },
+      {
+        "selectedIconPath": "./static/images/addresssty.png",  
+        "iconPath": "./static/images/address.png", 
+        "pagePath": "pages/address/address", 
+        "text": "地理位置"  
+      },
+      {
         "selectedIconPath": "./static/images/ordersty.png",  
         "iconPath": "./static/images/order.png", 
         "pagePath": "pages/order/order", 
         "text": "订单"  
-      },
-      {
-        "selectedIconPath": "./static/images/minesty.png",  
-        "iconPath": "./static/images/mine.png", 
-        "pagePath": "pages/mine/mine", 
-        "text": "我的"  
       }
-
+    
     ]
   },
   "style": "v2",

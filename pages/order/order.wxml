@@ -1,2 +1,23 @@
 <!--pages/order/order.wxml-->
-<text>pages/order/order.wxml</text>
+<view class="contain">
+    <view class="content">
+        <!-- 订单 -->
+          <view class="content_box" wx:for="{{getdata}}">
+          <view class="delete">
+             <view>订单号：{{item._id}}</view>
+             <image src="../../static/images/delete.png" bindtap="delete" data-data="{{getdata[index]}}"></image>
+          </view>
+             
+              <view class="goods">
+                <image src="{{item.picurl}}"></image>
+                <view>
+                  <view>{{item.name}}</view>
+                  <view>￥{{item.price}}</view>
+                </view>
+              </view>
+          </view>
+          <van-dialog id="van-dialog" /> 
+    </view>
+       <!-- 弹窗 -->
+  
+</view>
