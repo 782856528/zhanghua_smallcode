@@ -17,6 +17,7 @@ function post(url, data = {}) {
  * 微信的request
  */
 function request(url, data = {}, method = "") {
+  var that=this;
   var contentType = 'application/json'
   console.log( wx.getStorageSync('token'))
   return new Promise(function(resolve, reject) {
@@ -26,9 +27,15 @@ function request(url, data = {}, method = "") {
       method: method,
       header: {
         'Content-Type': contentType,
-        'Authorization': 'Bearer ' + wx.getStorageSync('token')
+        'Authorization': wx.getStorageSync('token')
       },
       success: function(res) {
+        if(res.data.isSuccess==500){
+          wx.clearStorageSync('token');
+          wx.navigateTo({
+            url: '/pages/login/login',
+          })
+        }
         if (res.data.isSuccess == true) {
           wx.showToast({
             title: res.data.msg,
